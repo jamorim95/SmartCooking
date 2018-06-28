@@ -9,6 +9,7 @@
         android:id="@+id/receita_detalhes_titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/black"
         android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
         />
 

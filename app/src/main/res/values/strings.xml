@@ -1,32 +1,27 @@
 <resources>
     <string name="app_name">SmartCooking</string>
 
+    <!-- Nome dos Botoes -->
+    <string name="carne_btn">carne</string>
+    <string name="peixe_btn">peixe</string>
+    <string name="vegan_btn">vegetariano</string>
+    <string name="sobremesa_btn">sobremesa</string>
+    <string name="snacks_btn">snacks</string>
+    <string name="outros_btn">outros</string>
+
+    <!-- Pesquisa por nome -->
+    <string name="pesquisa">pesquisa</string>
+    <string name="nome_receita_hint">Insira o nome da receita</string>
+
+
     <string name="search_btn">Procurar Receitas</string>
     <string name="addIngr_btn">Mais Ingredientes</string>
     <string name="removeIngr_btn">Menos Ingredientes</string>
     <string name="ingr_prompt">Escolha um ingrediente</string>
-    <string name="max_ingr">Número máximo de ingredientes atingido !</string>
+    <string name="max_ingr">Número máximo de ingredientes atingido!</string>
     <string name="novo_ingr">Novo ingrediente adicionado</string>
     <string name="del_ingr">Ingrediente removido</string>
     <string name="min_ingr">Número mínimo de ingredientes !</string>
-
-
-    <!-- Nome dos Botoes -->
-    <string name="carne_btn">Carne</string>
-    <string name="peixe_btn">Peixe</string>
-    <string name="vegan_btn">Vegetariano</string>
-    <string name="sobremesa_btn">Sobremesa</string>
-    <string name="snacks_btn">Snacks</string>
-    <string name="outros_btn">Outros</string>
-
-
-    <!-- Pesquisa por nome -->
-    <string name="pesquisa">Pesquisa</string>
-    <string name="verTodasReceitas">Ver todas as receitas</string>
-    <string name="nome_receita_hint">Insira o nome da receita</string>
-    <string name="resultados">Resultados da pesquisa:</string>
-    <string name="search">Procurar</string>
-    <string name="clr_search">Limpar procura</string>
 
 
     <!-- Receita Individual -->
@@ -42,7 +37,7 @@
     <string name="parceiros_label">Parceiros:</string>
     <string name="outros_label">Outros:</string>
     <string name="icons_label">Icons feitos por:</string>
-    <string name="acercaNos_texto">\t\tA equipa que criou a SmartCooking é composta por 6 estudantes de Engenharia Informática da Universidade de Coimbra. Esta equipa no intuito de realizar um projecto para a cadeira de Projectos de Gestão e de Inovação, teve como ideia a realização de uma aplicação que combata as dificuldades na preparação e escolha de refeições com os ingredientes que estão disponíveis na sua dispensa.\n\tSmartCooking irá ajudar todos os estudantes e todas as pessoas sem ideias e com dificuldades na preparação de uma refeição sem dúvida!\n\tBom apetite!\n\nContacto:      smartcookinguc@gmail.com</string>
+    <string name="acercaNos_texto">A equipa que criou a SmartCooking é composta por 6 estudantes de Engenharia Informática da Universidade de Coimbra. Esta equipa no intuito de realizar um projecto para a cadeira de Projectos de Gestão e de Inovação, teve como ideia a realização de uma aplicação que combata as dificuldades na preparação e escolha de refeições com os ingredientes que estão disponíveis na sua dispensa.\n\tSmartCooking irá ajudar todos os estudantes e todas as pessoas sem ideias e com dificuldades na preparação de uma refeição sem dúvida!\n\tBom apetite!\n\nContacto:      smartcookinguc@gmail.com</string>
     <string name="parceiros_texto">Visitem as páginas dos nossos parceiros:</string>
     <string name="fb_label">Facebook:</string>
     <string name="twitter_label">Twitter:</string>
@@ -54,11 +49,11 @@
 
     <!-- Menu -->
     <string-array name="menu">
-        <item>INGREDIENTES</item>
-        <item>PESQUISA</item>
-        <item>CATEGORIAS</item>
-        <item>TODAS</item>
-        <item>ACERCA</item>
+        <item>Ingredientes</item>
+        <item>Pesquisa</item>
+        <item>Categorias</item>
+        <item>Todas</item>
+        <item>Acerca</item>
     </string-array>
 
     <!-- Array de ingredientes -->

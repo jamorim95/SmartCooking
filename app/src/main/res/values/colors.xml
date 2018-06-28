@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#BD0322</color>
-    <color name="colorPrimaryDark">#97021B</color>
+    <color name="colorPrimary">#bc0823</color>
+    <color name="colorPrimaryDark">#ab0820</color>
     <color name="colorAccent">#FF4081</color>
 
     <!-- Cores de Merda -->
@@ -24,8 +24,13 @@
     <color name="black">#000000</color>
 
 
-    <!-- Cores dos Butoes das CategoriasActivity -->
+    <!-- Cores dos Botoes das CategoriasActivity -->
 
-    <color name="button">#d71d3c</color>
+    <color name="button1">#c8344b</color>
+    <color name="button2">#c21e37</color>
+    <color name="button3">#bc0823</color>
+    <color name="button4">#ab0820</color>
+    <color name="button5">#9a071d</color>
+    <color name="button6">#89061a</color>
 
 </resources>

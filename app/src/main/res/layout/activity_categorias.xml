@@ -9,9 +9,6 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="-2dp"
-        android:layout_marginStart="-2dp"
-        android:layout_marginEnd="-2dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -25,49 +22,55 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_border"
                 android:layout_weight="1">
-
-                <!-- android:layout_centerInParent="true" -->
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/meat"/>
 
                 <Button
                     android:id="@+id/carne_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
                     android:gravity="bottom|center"
-                    android:textSize="15sp"
-                    android:text="@string/carne_btn" />
+                    android:text="@string/carne_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="10dp"
+                    android:fontFeatureSettings="smcp"
+                    android:background="@color/button1"/>
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/meat"/>
+
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_border"
                 android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/fish" />
 
                 <Button
                     android:id="@+id/peixe_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
                     android:gravity="bottom|center"
-                    android:textSize="15sp"
-                    android:text="@string/peixe_btn" />
+                    android:text="@string/peixe_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="10dp"
+                    android:fontFeatureSettings="smcp"
+                    android:background="@color/button2"/>
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/fish" />
+
             </RelativeLayout>
         </LinearLayout>
 
@@ -82,47 +85,55 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_border"
                 android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/vegan" />
 
                 <Button
                     android:id="@+id/vegan_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
                     android:gravity="bottom|center"
-                    android:textSize="15sp"
-                    android:text="@string/vegan_btn" />
+                    android:text="@string/vegan_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="10dp"
+                    android:fontFeatureSettings="smcp"
+                    android:background="@color/button3"/>
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/vegan" />
+
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_border"
                 android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/dessert" />
 
                 <Button
                     android:id="@+id/sobremesa_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
                     android:gravity="bottom|center"
-                    android:textSize="15sp"
-                    android:text="@string/sobremesa_btn" />
+                    android:text="@string/sobremesa_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="10dp"
+                    android:fontFeatureSettings="smcp"
+                    android:background="@color/button4"/>
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/dessert" />
+
             </RelativeLayout>
         </LinearLayout>
 
@@ -137,51 +148,58 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_border"
                 android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/snack" />
 
                 <Button
                     android:id="@+id/snack_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
                     android:gravity="bottom|center"
-                    android:textSize="15sp"
-                    android:text="@string/snacks_btn" />
+                    android:text="@string/snacks_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:paddingBottom="10dp"
+                    android:fontFeatureSettings="smcp"
+                    android:background="@color/button5"/>
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/snack" />
+
+
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/background_border"
                 android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/other" />
 
                 <Button
                     android:id="@+id/outro_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
+                    android:background="@color/button6"
                     android:gravity="bottom|center"
-                    android:textSize="15sp"
-                    android:text="@string/outros_btn" />
+                    android:paddingBottom="10dp"
+                    android:text="@string/outros_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:fontFeatureSettings="smcp"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/other" />
 
             </RelativeLayout>
         </LinearLayout>
-
     </LinearLayout>
 
     <!-- Side navigation drawer UI -->
