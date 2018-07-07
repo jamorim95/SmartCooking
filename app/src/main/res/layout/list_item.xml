@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/receita_image"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:layout_marginEnd="5dip"
@@ -19,7 +19,7 @@
 
     <TextView
         android:id="@+id/receita_difficult"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/receita_name"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/receita_difficult"
         android:layout_alignParentEnd="true"

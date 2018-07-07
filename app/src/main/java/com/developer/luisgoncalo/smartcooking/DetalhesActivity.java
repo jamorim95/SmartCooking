@@ -1,10 +1,18 @@
 package com.developer.luisgoncalo.smartcooking;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
+import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 public class DetalhesActivity extends AppCompatActivity {
 
@@ -13,52 +21,58 @@ public class DetalhesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalhes);
 
-        String subtitulo;
-
         Receita receita = (Receita) getIntent().getSerializableExtra("receita");
 
+        //Toast.makeText(DetalhesActivity.this, receita.getNome(), Toast.LENGTH_SHORT).show();
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+
         TextView receita_title = findViewById(R.id.receita_detalhes_titulo);
-        /*TextView receita_subtitle = findViewById(R.id.receita_detalhes_subtitulo);
-        TextView receita_texto = findViewById(R.id.receita_detalhes_texto);*/
+        TextView receita_subtitle = findViewById(R.id.receita_detalhes_subtitulo);
+        TextView receita_texto = findViewById(R.id.receita_detalhes_preparacao);
         //TextView receita_fornecedor = findViewById(R.id.receita_fornecedor);
+
+        String subtitulo = "Tempo: ";
+        subtitulo += receita.getTempo() + " min, Dificuldade: ";
 
         switch (receita.getDificuldade()) {
             case 1:
-                subtitulo = "Facil";
+                subtitulo += "Facil";
                 break;
             case 2:
-                subtitulo = "Intermedio";
+                subtitulo += "Intermedio";
                 break;
 
             case 3:
-                subtitulo = "Avançado";
+                subtitulo += "Avançado";
                 break;
 
             default:
-                subtitulo = "Lendário";
+                subtitulo += "Lendário";
                 break;
         }
 
-        subtitulo += "  +/- " + receita.getTempo_prep() + " minutos";
-
-        receita_title.setText(receita.getTitle());
-        /*receita_subtitle.setText(subtitulo);
-        receita_texto.setText(receita.getSpecialString_ingrs()+"\n"+receita.getSpecialString_prep());*/
+        receita_title.setText(receita.getNome());
+        receita_subtitle.setText(subtitulo);
+        receita_texto.setText("aqui vai a preparação");
 
         //receita_fornecedor.setMovementMethod(LinkMovementMethod.getInstance());
         //receita_fornecedor.setText(getLinkFornecedor(receita.getFornecedor()));
 
-        //String image_url = receita.getURLLink();
+        /*String imageUri = receita.getImagem();
 
-        //Toast.makeText(DetailsReceita_activity.this, receita.getURL_link(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(DetalhesActivity.this, imageUri, Toast.LENGTH_SHORT).show();
 
+        ImageView iv = findViewById(R.id.receita_image);
 
-        /*int loader = R.drawable.back;
-        ImageView iv =(ImageView) findViewById(R.id.receita_image);
+        ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(DetalhesActivity.this));
 
-        ImageLoader imgload = new ImageLoader(getApplicationContext());
+        ImageLoader imageLoader = ImageLoader.getInstance();
+        imageLoader.displayImage(imageUri, iv);*/
 
-        imgload.DisplayImage(image_url, loader, iv);*/
     }
 
 
@@ -89,5 +103,16 @@ public class DetalhesActivity extends AppCompatActivity {
             result = Html.fromHtml(html);
         }
         return result;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                this.finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

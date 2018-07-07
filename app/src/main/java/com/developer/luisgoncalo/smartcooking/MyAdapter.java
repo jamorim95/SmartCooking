@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +76,7 @@ class MyAdapter extends BaseAdapter{
         //Receita receita = receitas.get(position);
 
         // Set the results into TextViews
-        holder.nome.setText(receitas.get(position).getTitle());
+        holder.nome.setText(receitas.get(position).getNome());
         String dificuldade;
         switch (receitas.get(position).getDificuldade()) {
             case 1:
@@ -123,7 +122,7 @@ class MyAdapter extends BaseAdapter{
         else {
             for (Receita r : arraylist)
             {
-                if (r.getTitle().toLowerCase(Locale.getDefault()).contains(charText))
+                if (r.getNome().toLowerCase(Locale.getDefault()).contains(charText))
                 {
                     receitas.add(r);
                 }
