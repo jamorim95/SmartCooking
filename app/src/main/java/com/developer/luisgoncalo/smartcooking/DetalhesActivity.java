@@ -1,19 +1,14 @@
 package com.developer.luisgoncalo.smartcooking;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Html;
-import android.text.Spanned;
-import android.view.MenuItem;
-import android.view.View;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
 public class DetalhesActivity extends AppCompatActivity {
 
@@ -26,15 +21,27 @@ public class DetalhesActivity extends AppCompatActivity {
 
         //Toast.makeText(DetalhesActivity.this, receita.getNome(), Toast.LENGTH_SHORT).show();
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        final Toolbar mToolbar = findViewById(R.id.details_toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setTitle(receita.getNome());
 
-        TextView receita_title = findViewById(R.id.receita_detalhes_titulo);
-        TextView receita_subtitle = findViewById(R.id.receita_detalhes_subtitulo);
+        AppBarLayout mAppBarLayout = findViewById(R.id.app_bar);
+        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            int scrollRange = -1;
+
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (scrollRange == -1) {
+                    scrollRange = appBarLayout.getTotalScrollRange();
+                }
+            }
+        });
+
+        //TextView receita_title = findViewById(R.id.receita_detalhes_titulo);
+        //TextView receita_subtitle = findViewById(R.id.receita_detalhes_subtitulo);
         TextView receita_texto = findViewById(R.id.receita_detalhes_preparacao);
-        //TextView receita_fornecedor = findViewById(R.id.receita_fornecedor);
 
         String subtitulo = "Tempo: ";
         subtitulo += receita.getTempo() + " min, Dificuldade: ";
@@ -56,31 +63,20 @@ public class DetalhesActivity extends AppCompatActivity {
                 break;
         }
 
-        receita_title.setText(receita.getNome());
-        receita_subtitle.setText(subtitulo);
-        receita_texto.setText(receita.getPreparacaoString());
+        //receita_title.setText(receita.getNome());
+        //receita_subtitle.setText(subtitulo);
+        //receita_texto.setText(receita.getPreparacaoString());
 
-        /*String imageUri = receita.getImagem();
-
-        Toast.makeText(DetalhesActivity.this, imageUri, Toast.LENGTH_SHORT).show();
-
-        ImageView iv = findViewById(R.id.receita_image);
+        /*ImageView iv = findViewById(R.id.receita_image);
 
         ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(DetalhesActivity.this));
-
         ImageLoader imageLoader = ImageLoader.getInstance();
-        imageLoader.displayImage(imageUri, iv);*/
+        imageLoader.displayImage(receita.getImagem(), iv);*/
     }
 
-
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                this.finish();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

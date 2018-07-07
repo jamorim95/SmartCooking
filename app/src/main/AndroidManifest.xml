@@ -37,7 +37,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".DetalhesActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/DetailsTheme" />
         <activity
             android:name=".PesquisaActivity"
             android:screenOrientation="portrait"
@@ -45,6 +46,11 @@
         <activity
             android:name=".FiltrarReceitasActivity"
             android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>

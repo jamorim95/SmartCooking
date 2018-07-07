@@ -37,11 +37,10 @@
     <string name="parceiros_label">Parceiros:</string>
     <string name="outros_label">Outros:</string>
     <string name="icons_label">Icons feitos por:</string>
-    <string name="acercaNos_texto">A equipa que criou a SmartCooking é composta por 6 estudantes de Engenharia Informática da Universidade de Coimbra. Esta equipa no intuito de realizar um projecto para a cadeira de Projectos de Gestão e de Inovação, teve como ideia a realização de uma aplicação que combata as dificuldades na preparação e escolha de refeições com os ingredientes que estão disponíveis na sua dispensa.\n\tSmartCooking irá ajudar todos os estudantes e todas as pessoas sem ideias e com dificuldades na preparação de uma refeição sem dúvida!\n\tBom apetite!\n\nContacto:      smartcookinguc@gmail.com</string>
+    <string name="acercaNos_texto">A equipa que criou a SmartCooking é composta por 6 estudantes de Engenharia Informática da Universidade de Coimbra. Esta equipa no intuito de realizar um projecto para a cadeira de Projectos de Gestão e de Inovação, teve como ideia a realização de uma aplicação que combata as dificuldades na preparação e escolha de refeições com os ingredientes que estão disponíveis na sua dispensa.\n\tSmartCooking irá ajudar todos os estudantes e todas as pessoas sem ideias e com dificuldades na preparação de uma refeição sem dúvida!\nBom apetite!</string>
     <string name="parceiros_texto">Visitem as páginas dos nossos parceiros:</string>
     <string name="fb_label">Facebook:</string>
     <string name="twitter_label">Twitter:</string>
-    <string name="site_label">Website:</string>
 
     <!-- Erros -->
     <string name="erro_nome_size">O nome a procurar tem de ter pelo menos 3 caracteres</string>
@@ -261,5 +260,6 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="receita_image_description">Image of the Recipe</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
 
 </resources>
