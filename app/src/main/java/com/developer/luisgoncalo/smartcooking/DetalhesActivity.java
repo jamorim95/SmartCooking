@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.Spanned;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,10 +58,7 @@ public class DetalhesActivity extends AppCompatActivity {
 
         receita_title.setText(receita.getNome());
         receita_subtitle.setText(subtitulo);
-        receita_texto.setText("aqui vai a preparação");
-
-        //receita_fornecedor.setMovementMethod(LinkMovementMethod.getInstance());
-        //receita_fornecedor.setText(getLinkFornecedor(receita.getFornecedor()));
+        receita_texto.setText(receita.getPreparacaoString());
 
         /*String imageUri = receita.getImagem();
 
@@ -72,38 +70,8 @@ public class DetalhesActivity extends AppCompatActivity {
 
         ImageLoader imageLoader = ImageLoader.getInstance();
         imageLoader.displayImage(imageUri, iv);*/
-
     }
 
-
-    public Spanned getLinkFornecedor(String nome) {
-        String s = "";
-        Spanned sp;
-
-        if (nome.equals("Hoje Para Jantar")) {
-            s = "<a href=\'http://hojeparajantar.blogspot.pt/'>Hoje para jantar</a>";
-        } else if (nome.equals("SmartCooking")) {
-            s = "<a href=\'https://www.facebook.com/SmartCookingApp/'>SmartCookingApp</a>";
-        } else if (nome.equals("Mais Um Sobre Culinária")) {
-            s = "<a href=\'http://maisumsobreculinaria.blogspot.pt/'>Mais Um Sobre Culinária</a>";
-        } else if (nome.equals("Comida de Quinta")) {
-            s = "<a href=\'http://comidadequinta.blogspot.pt/'>Comida de Quinta</a>";
-        }
-
-        sp = fromHtml(s);
-        return sp;
-    }
-
-    @SuppressWarnings("deprecation")
-    public static Spanned fromHtml(String html) {
-        Spanned result;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-            result = Html.fromHtml(html, Html.FROM_HTML_MODE_LEGACY);
-        } else {
-            result = Html.fromHtml(html);
-        }
-        return result;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

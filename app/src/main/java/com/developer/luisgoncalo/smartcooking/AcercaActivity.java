@@ -33,11 +33,9 @@ public class AcercaActivity extends AppCompatActivity {
     private TextView text_parceiros3_link;
     private TextView text_facebook_link;
     private TextView text_twitter_link;
-    private TextView text_site_link;
     private TextView text_icons_link;
 
     // Hiperligações
-    private Spanned link_Website;
     private Spanned link_Facebook;
     private Spanned link_Twitter;
     private Spanned link_MaisUmCulinaria;
@@ -67,7 +65,6 @@ public class AcercaActivity extends AppCompatActivity {
         text_parceiros3_link = findViewById(R.id.parceiros3_txt);
         text_facebook_link = findViewById(R.id.fb_link);
         text_twitter_link = findViewById(R.id.twitter_link);
-        text_site_link = findViewById(R.id.site_link);
         text_icons_link = findViewById(R.id.icons_link);
 
 
@@ -76,7 +73,6 @@ public class AcercaActivity extends AppCompatActivity {
         link_HojePraJantar=fromHtml("<a href=\'http://hojeparajantar.blogspot.pt/'>Hoje para jantar</a>");
         link_UC=fromHtml("<a href=\'http://uc.pt/'>Universidade de Coimbra</a>");
         link_Twitter=fromHtml("<a href=\'https://twitter.com/smartcookingapp'>@smartcookingapp</a>");
-        link_Website=fromHtml("<a href=\'https://smartcookingapp.wordpress.com'>smartcookingapp.wordpress.com</a>");
         link_Icons=fromHtml("<a href='https://www.flaticon.com/authors/madebyoliver'>Madebyoliver</a>");
 
 
@@ -94,9 +90,6 @@ public class AcercaActivity extends AppCompatActivity {
 
         text_twitter_link.setText(link_Twitter);
         text_twitter_link.setMovementMethod(LinkMovementMethod.getInstance());
-
-        text_site_link.setText(link_Website);
-        text_site_link.setMovementMethod(LinkMovementMethod.getInstance());
 
         text_icons_link.setText(link_Icons);
         text_icons_link.setMovementMethod(LinkMovementMethod.getInstance());

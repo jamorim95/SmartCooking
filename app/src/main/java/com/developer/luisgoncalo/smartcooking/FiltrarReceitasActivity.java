@@ -44,7 +44,7 @@ public class FiltrarReceitasActivity extends AppCompatActivity {
     }
 
     private List<Receita> todosAsReceitas() {
-        return new ArrayList<>(Arrays.asList(
+        /*return new ArrayList<>(Arrays.asList(
                 new Receita(1, "Tostas de Frango no Forno",15,3,"Snack","https://i.redditmedia.com/asjwnETQdQ4SouvtlCFU2Ek6-TeDNj_fu_XeH88T40Y.jpg?w=903&s=45dbac737ef1389eccee05cd4eade812"),
                 new Receita(2, "Salsichas com Queijo e Fiambre",15,3,"Carne"),
                 new Receita(3, "Esparguete com atum e Rucula", 15,2,"Peixe"),
@@ -83,6 +83,11 @@ public class FiltrarReceitasActivity extends AppCompatActivity {
                 new Receita(36, "Massa com atum",15,2,"Peixe"),
                 new Receita(37, "Ovos Mexidos com Atum",10,1,"Peixe")
 
+        ));*/
+
+        return new ArrayList<>(Arrays.asList(
+        new Receita(1,"Tostas de Frango no Forno",15,3,"Snack", Arrays.asList("Levar um tacho ao lume com a cebola picada e uma colher de sopa de azeite e deixar refogar","Acrescentar o frango desfiado e envolver bem.","Polvilhar com a farinha e junte o leite.","Deixar cozinhar, mexendo sempre de modo a ficar com uma espécie de creme.","Temperar com sal, pimenta e reserve.","Rechear duas fatias de pão com o creme de frango e cubra com o queijo.","Tapar com a outra fatia de pão e leve à tostadeira para tostar o pão e derreter o queijo.","Servir ainda quente."),"https://smartcookingapp.files.wordpress.com/2015/10/receita_pgi.jpg"),
+        new Receita(2,"Salsichas com Queijo e Fiambre",15,3,"Carne", Arrays.asList("Estender uma fatia de fiambre e, por cima colocar uma fatia de queijo.|Barrar o queijo com a mostarda a seu gosto.","Colocar a salsicha por cima e enrolar nas fatias.","Polvilhar as salsichas enroladas com o queijo mozzarella.","Colocar no forno e deixe ficar até gratinar o queijo e está pronto a servir!"),"https://smartcookingapp.files.wordpress.com/2015/10/sals.jpg")
         ));
     }
 

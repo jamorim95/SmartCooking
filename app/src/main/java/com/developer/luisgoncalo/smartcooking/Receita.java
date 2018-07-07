@@ -41,7 +41,7 @@ public class Receita implements Serializable,Comparable<Receita> {
         this.imagem = url;
     }
 
-    public Receita(long id, String nome, int dificuldade, int tempo, int n_ingredientes, String categoria, String fornecedor, List<String> preparacao, List<String> ingredientes, String imagem, List<String> ingredientes_simples) {
+    public Receita(long id, String nome, int tempo, int dificuldade, int n_ingredientes, String categoria, String fornecedor, List<String> preparacao, List<String> ingredientes, String imagem, List<String> ingredientes_simples) {
         this.id = id;
         this.nome = nome;
         this.dificuldade = dificuldade;
@@ -53,6 +53,16 @@ public class Receita implements Serializable,Comparable<Receita> {
         this.ingredientes = ingredientes;
         this.imagem = imagem;
         this.ingredientes_simples = ingredientes_simples;
+    }
+
+    public Receita(int id, String nome, int tempo, int dificuldade, String categoria, List<String> preparacao, String imagem) {
+        this.id = id;
+        this.nome = nome;
+        this.dificuldade = dificuldade;
+        this.tempo = tempo;
+        this.categoria = categoria;
+        this.preparacao = preparacao;
+        this.imagem = imagem;
     }
 
     public long getId() {
@@ -141,6 +151,17 @@ public class Receita implements Serializable,Comparable<Receita> {
 
     public void setIngredientes_simples(List<String> ingredientes_simples) {
         this.ingredientes_simples = ingredientes_simples;
+    }
+
+    public String getPreparacaoString(){
+        StringBuilder prep = new StringBuilder();
+
+        for (String s : this.preparacao)
+        {
+            prep.append("- ").append(s).append("\n");
+        }
+
+        return prep.toString();
     }
 
     @Override

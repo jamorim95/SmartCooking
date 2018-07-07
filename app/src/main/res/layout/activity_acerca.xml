@@ -52,29 +52,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="70dp"
-                            android:layout_height="wrap_content"
-                            android:text="@string/site_label"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
-
-                        <TextView
-                            android:id="@+id/site_link"
-                            android:layout_width="250dp"
-                            android:layout_height="wrap_content"
-                            android:textColor="#000000"
-                            android:textSize="15sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/activity_horizontal_margin"
-                        android:gravity="start|top"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="70dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/fb_label"
                             android:textColor="#000000"
@@ -82,7 +60,8 @@
 
                         <TextView
                             android:id="@+id/fb_link"
-                            android:layout_width="250dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
                             android:textSize="15sp" />
@@ -97,7 +76,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="70dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/twitter_label"
                             android:textColor="#000000"
@@ -105,7 +84,8 @@
 
                         <TextView
                             android:id="@+id/twitter_link"
-                            android:layout_width="250dp"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
                             android:textSize="15sp" />
